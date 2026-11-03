@@ -8,6 +8,6 @@
   }
 
   body {
-    @apply bg-cream-100 text-charcoal-900 antialiased selection:bg-terracotta-600 selection:text-cream-50;
+    @apply bg-cream-50 text-gray-900 antialiased selection:bg-accent selection:text-gray-900;
   }
 }

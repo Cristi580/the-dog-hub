@@ -18,22 +18,22 @@ export default function FeedingCalculator() {
     <section
       id="calculator"
       aria-labelledby="calculator-heading"
-      className="py-16 sm:py-20 bg-forest-900 text-cream-50 rounded-3xl mx-4 sm:mx-6 lg:mx-8 my-12 px-6 sm:px-10 lg:px-16 shadow-xl border border-forest-800"
+      className="py-16 sm:py-20 bg-highlight text-gray-900 rounded-3xl mx-4 sm:mx-6 lg:mx-8 my-12 px-6 sm:px-10 lg:px-16 shadow-xl border border-gray-900/15"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Inputs */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-800 text-terracotta-300 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary text-gray-900 border border-gray-900/15 text-xs font-bold uppercase tracking-wider">
             <Calculator className="w-4 h-4" />
             Interactive Raw Portion Calculator
           </div>
           <h2
             id="calculator-heading"
-            className="font-serif text-3xl sm:text-4xl font-bold leading-tight"
+            className="font-serif text-3xl sm:text-4xl font-bold leading-tight text-gray-900"
           >
             How much raw food does your dog need each day?
           </h2>
-          <p className="text-cream-200/85 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-900 text-sm sm:text-base leading-relaxed font-medium">
             Adult dogs typically thrive on <strong>2% to 3%</strong> of their ideal body weight per day, split across two meals. Use our vet-approved calculator below to find your exact daily portion.
           </p>
 
@@ -41,7 +41,7 @@ export default function FeedingCalculator() {
             <div>
               <label
                 htmlFor="dog-name-input"
-                className="block text-xs uppercase tracking-wider text-cream-200 font-semibold mb-2"
+                className="block text-xs uppercase tracking-wider text-gray-900 font-bold mb-2"
               >
                 Your Dog&apos;s Name
               </label>
@@ -50,16 +50,16 @@ export default function FeedingCalculator() {
                 type="text"
                 value={dogName}
                 onChange={(e) => setDogName(e.target.value || "Your Dog")}
-                className="w-full px-4 py-3 rounded-xl bg-forest-950/90 border border-forest-700 text-cream-50 font-medium focus:outline-none focus:border-terracotta-400"
+                className="w-full px-4 py-3 rounded-xl bg-white border border-gray-900/20 text-gray-900 font-bold focus:outline-none focus:border-gray-900"
               />
             </div>
 
             <div>
               <label
                 htmlFor="dog-weight-range"
-                className="block text-xs uppercase tracking-wider text-cream-200 font-semibold mb-2"
+                className="block text-xs uppercase tracking-wider text-gray-900 font-bold mb-2"
               >
-                Ideal Weight: <span className="text-terracotta-400 font-bold">{weightKg} kg</span>
+                Ideal Weight: <span className="underline font-bold">{weightKg} kg</span>
               </label>
               <input
                 id="dog-weight-range"
@@ -69,9 +69,9 @@ export default function FeedingCalculator() {
                 step={1}
                 value={weightKg}
                 onChange={(e) => setWeightKg(Number(e.target.value))}
-                className="w-full accent-terracotta-500 h-2 bg-forest-950 rounded-lg cursor-pointer mt-3"
+                className="w-full accent-[#c18883] h-2 bg-white rounded-lg cursor-pointer mt-3"
               />
-              <div className="flex justify-between text-[11px] text-cream-300/60 mt-1">
+              <div className="flex justify-between text-[11px] text-gray-900 font-semibold mt-1">
                 <span>2kg (Toy)</span>
                 <span>20kg (Medium)</span>
                 <span>55kg (Giant)</span>
@@ -81,7 +81,7 @@ export default function FeedingCalculator() {
 
           {/* Activity Level Selector */}
           <div>
-            <span className="block text-xs uppercase tracking-wider text-cream-200 font-semibold mb-2.5">
+            <span className="block text-xs uppercase tracking-wider text-gray-900 font-bold mb-2.5">
               Life Stage &amp; Activity Level
             </span>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
@@ -97,12 +97,12 @@ export default function FeedingCalculator() {
                   onClick={() => setActivityPercent(option.pct)}
                   className={`p-3 rounded-xl border text-left transition-all ${
                     activityPercent === option.pct
-                      ? "bg-terracotta-600 border-terracotta-400 text-white shadow-md"
-                      : "bg-forest-950/60 border-forest-700 text-cream-200 hover:border-forest-500"
+                      ? "bg-accent border-gray-900 text-gray-900 shadow-md"
+                      : "bg-white/80 border-gray-900/20 text-gray-900 hover:bg-white"
                   }`}
                 >
                   <span className="block text-xs font-bold">{option.label}</span>
-                  <span className="block text-[11px] opacity-80 mt-0.5">
+                  <span className="block text-[11px] font-medium mt-0.5">
                     {option.sub}
                   </span>
                 </button>
@@ -112,52 +112,52 @@ export default function FeedingCalculator() {
         </div>
 
         {/* Right Result Card */}
-        <div className="lg:col-span-5 bg-cream-50 text-charcoal-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-cream-300">
-          <div className="flex items-center justify-between border-b border-cream-300 pb-4">
+        <div className="lg:col-span-5 bg-white text-gray-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-gray-900/15">
+          <div className="flex items-center justify-between border-b border-gray-200 pb-4">
             <div>
-              <span className="text-xs uppercase tracking-widest text-terracotta-700 font-bold">
+              <span className="text-xs uppercase tracking-widest text-gray-900 font-bold">
                 Tailored Raw Plan
               </span>
-              <h3 className="font-serif text-2xl font-bold text-forest-900 mt-0.5">
+              <h3 className="font-serif text-2xl font-bold text-gray-900 mt-0.5">
                 {dogName}&apos;s Daily Portion
               </h3>
             </div>
-            <Sparkles className="w-7 h-7 text-terracotta-600" />
+            <Sparkles className="w-7 h-7 text-gray-900" />
           </div>
 
-          <div className="py-6 grid grid-cols-2 gap-4 border-b border-cream-300">
-            <div className="bg-cream-100 p-4 rounded-xl">
-              <span className="text-xs text-charcoal-800/70 block">
+          <div className="py-6 grid grid-cols-2 gap-4 border-b border-gray-200">
+            <div className="bg-primary/40 p-4 rounded-xl border border-gray-900/10">
+              <span className="text-xs text-gray-900 font-semibold block">
                 Daily Raw Intake
               </span>
-              <span className="font-serif text-3xl font-bold text-forest-800">
+              <span className="font-serif text-3xl font-bold text-gray-900">
                 {dailyGrams}g
               </span>
-              <span className="text-[11px] text-charcoal-800/60 block mt-1">
+              <span className="text-[11px] text-gray-800 block mt-1 font-medium">
                 ({Math.round(dailyGrams / 2)}g morning &amp; evening)
               </span>
             </div>
 
-            <div className="bg-cream-100 p-4 rounded-xl">
-              <span className="text-xs text-charcoal-800/70 block">
+            <div className="bg-highlight/40 p-4 rounded-xl border border-gray-900/10">
+              <span className="text-xs text-gray-900 font-semibold block">
                 Weekly 500g Packs
               </span>
-              <span className="font-serif text-3xl font-bold text-terracotta-700">
+              <span className="font-serif text-3xl font-bold text-gray-900">
                 {packsPerWeek} packs
               </span>
-              <span className="text-[11px] text-charcoal-800/60 block mt-1">
+              <span className="text-[11px] text-gray-800 block mt-1 font-medium">
                 Est. £{estimatedCostPerDay} / day
               </span>
             </div>
           </div>
 
-          <p className="text-xs text-charcoal-800/75 mt-4 leading-relaxed">
+          <p className="text-xs text-gray-800 mt-4 leading-relaxed font-medium">
             Includes the optimal 80% muscle meat, 10% ground bone, and 10% nutrient-rich secreting offal ratio.
           </p>
 
           <Link
             href="/shop"
-            className="mt-6 w-full py-3.5 px-6 rounded-full bg-forest-700 hover:bg-forest-800 text-cream-50 font-semibold text-sm flex items-center justify-center gap-2 shadow-md transition-colors"
+            className="mt-6 w-full py-3.5 px-6 rounded-full bg-accent hover:bg-accent-dark text-gray-900 font-bold text-sm flex items-center justify-center gap-2 shadow-md border border-gray-900/15 transition-colors"
           >
             <span>Build {dogName}&apos;s Box Now</span>
             <ArrowRight className="w-4 h-4" />

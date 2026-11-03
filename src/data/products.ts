@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     isPopular: true,
     lifeStage: "All Life Stages",
     description:
-      " ethically sourced 100% British pasture-raised beef muscle meat, finely ground bone, nutrient-dense beef liver, and kidney. Zero grains, fillers, or synthetic preservatives.",
+      "Ethically sourced 100% British pasture-raised beef muscle meat, finely ground bone, nutrient-dense beef liver, and kidney. Zero grains, fillers, or synthetic preservatives.",
     ingredients: [
       "80% British Beef (Chuck, Heart, Tripe, Tongue)",
       "10% Finely Ground Beef Bone",
@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.4%",
       fibre: "0.4%",
     },
-    accentColor: "from-terracotta-700 to-terracotta-900",
+    accentColor: "from-[#9dc183] to-[#83bcc1]",
   },
   {
     id: "free-range-turkey-duck",
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.6%",
       fibre: "0.3%",
     },
-    accentColor: "from-forest-700 to-forest-900",
+    accentColor: "from-[#83bcc1] to-[#9dc183]",
   },
   {
     id: "wild-scottish-venison",
@@ -123,7 +123,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.2%",
       fibre: "0.6%",
     },
-    accentColor: "from-amber-800 to-stone-900",
+    accentColor: "from-[#c18883] to-[#9dc183]",
   },
   {
     id: "atlantic-salmon-tripe",
@@ -156,7 +156,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.3%",
       fibre: "0.5%",
     },
-    accentColor: "from-teal-800 to-forest-950",
+    accentColor: "from-[#83bcc1] to-[#c18883]",
   },
   {
     id: "2-week-transition-starter-box",
@@ -189,7 +189,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.4%",
       fibre: "0.4%",
     },
-    accentColor: "from-terracotta-600 to-forest-800",
+    accentColor: "from-[#c18883] to-[#83bcc1]",
   },
   {
     id: "puppy-growth-complete",
@@ -221,7 +221,7 @@ export const PRODUCTS: Product[] = [
       ash: "2.5%",
       fibre: "0.3%",
     },
-    accentColor: "from-forest-600 to-forest-800",
+    accentColor: "from-[#9dc183] to-[#83bcc1]",
   },
   {
     id: "raw-meaty-marrow-bones",
@@ -247,7 +247,7 @@ export const PRODUCTS: Product[] = [
       ash: "24.0%",
       fibre: "0.2%",
     },
-    accentColor: "from-stone-700 to-charcoal-900",
+    accentColor: "from-[#9dc183] to-[#c18883]",
   },
   {
     id: "air-dried-venison-tendons",
@@ -273,7 +273,7 @@ export const PRODUCTS: Product[] = [
       ash: "4.1%",
       fibre: "1.2%",
     },
-    accentColor: "from-terracotta-800 to-charcoal-900",
+    accentColor: "from-[#c18883] to-[#9dc183]",
   },
   {
     id: "slow-simmered-bone-broth",
@@ -306,7 +306,7 @@ export const PRODUCTS: Product[] = [
       ash: "0.4%",
       fibre: "0.1%",
     },
-    accentColor: "from-amber-700 to-terracotta-900",
+    accentColor: "from-[#83bcc1] to-[#9dc183]",
   },
 ];
 

@@ -9,31 +9,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        forest: {
-          50: "#f2f7f4",
-          100: "#e0ede4",
-          200: "#c3dbcb",
-          300: "#98c1a7",
-          400: "#689f7e",
-          500: "#468260",
-          600: "#2d5a40",
-          700: "#244834",
-          800: "#1b3627",
-          900: "#14291d",
-          950: "#0b1710",
+        primary: {
+          DEFAULT: "#9dc183", // Sage Green
+          light: "#b5d1a0",
+          dark: "#82ab66",
         },
-        terracotta: {
-          50: "#fdf5f3",
-          100: "#fbe8e3",
-          200: "#f7d5cc",
-          300: "#f0b7a8",
-          400: "#e58d76",
-          500: "#d6684b",
-          600: "#c45133",
-          700: "#a33f26",
-          800: "#873622",
-          900: "#703122",
+        accent: {
+          DEFAULT: "#c18883", // Dusty Rose
+          light: "#d1a39f",
+          dark: "#ad6f6a",
         },
+        highlight: {
+          DEFAULT: "#83bcc1", // Soft Teal
+          light: "#a3cfd3",
+          dark: "#66a6ac",
+        },
+        sage: "#9dc183",
+        dustyRose: "#c18883",
+        softTeal: "#83bcc1",
         cream: {
           50: "#fdfcfa",
           100: "#f9f6f0",
@@ -42,8 +35,8 @@ const config: Config = {
           400: "#d5c5a9",
         },
         charcoal: {
-          800: "#262925",
-          900: "#1a1c19",
+          800: "#1f2937",
+          900: "#111827",
         },
       },
       fontFamily: {

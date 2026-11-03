@@ -20,13 +20,14 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://thedoghub.co.uk"),
   title: {
-    default: "The Dog Hub | Biologically Appropriate 80/10/10 Raw Dog Food Shop",
+    default: "The Dog Hub | Biologically Appropriate 80/10/10 Raw Dog Food Shop in Sheffield",
     template: "%s | The Dog Hub — Raw Dog Food Co.",
   },
   description:
-    "DEFRA-approved, vet-formulated 80/10/10 raw dog food made from 100% British & Irish grass-fed meat, bone, and offal. Next-day insulated eco-box delivery across the UK.",
+    "DEFRA-approved, vet-formulated 80/10/10 raw dog food made from 100% British & Irish grass-fed meat, bone, and offal. Visit us at 130 Halifax road, Sheffield, S6 1LH or order online.",
   keywords: [
     "raw dog food",
+    "raw dog food Sheffield",
     "80 10 10 raw dog food",
     "BARF dog food UK",
     "natural dog food delivery",
@@ -35,16 +36,16 @@ export const metadata: Metadata = {
     "raw puppy food",
     "The Dog Hub",
   ],
-  authors: [{ name: "The Dog Hub Nutrition Team" }],
-  creator: "The Dog Hub Ltd.",
+  authors: [{ name: "The Dog Hub" }],
+  creator: "The Dog Hub",
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://thedoghub.co.uk",
     siteName: "The Dog Hub",
-    title: "The Dog Hub | Ethical 80/10/10 Raw Dog Food Delivered Frozen",
+    title: "The Dog Hub | Ethical 80/10/10 Raw Dog Food in Sheffield & UK Delivery",
     description:
-      "Switch your dog to ancestral raw nutrition. 100% human-grade British cuts, zero grains or fillers, delivered frozen to your door.",
+      "Switch your dog to ancestral raw nutrition. 100% human-grade British cuts, zero grains or fillers, available in Sheffield and delivered frozen across the UK.",
   },
   twitter: {
     card: "summary_large_image",
@@ -71,20 +72,20 @@ const jsonLd = {
   description:
     "DEFRA-approved 80/10/10 raw dog food shop offering human-grade British grass-fed raw meals, raw meaty bones, and natural air-dried dog treats.",
   url: "https://thedoghub.co.uk",
-  telephone: "+44-800-999-4280",
-  email: "nutrition@thedoghub.co.uk",
+  telephone: "0730591742",
+  email: "petsshop.sheffield@gmail.com",
   priceRange: "££",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Unit 4 Meadowbarn Farm",
-    addressLocality: "Cotswolds",
-    postalCode: "GL7 5PQ",
+    streetAddress: "130 Halifax road",
+    addressLocality: "Sheffield",
+    postalCode: "S6 1LH",
     addressCountry: "GB",
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       opens: "08:30",
       closes: "17:30",
     },
@@ -98,7 +99,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fraunces.variable} ${plusJakarta.variable}`}>
-      <body className="font-sans min-h-screen flex flex-col bg-cream-100 text-charcoal-900">
+      <body className="font-sans min-h-screen flex flex-col bg-cream-50 text-gray-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
