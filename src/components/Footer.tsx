@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Dog,
   ShieldCheck,
   Truck,
   HeartHandshake,
@@ -68,15 +68,19 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         {/* Brand Column */}
         <div className="lg:col-span-2 space-y-4">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-accent border border-gray-900/15 flex items-center justify-center text-gray-900">
-              <Dog className="w-6 h-6" />
-            </div>
+          <Link href="/" className="inline-flex items-center gap-3 group">
+            <Image
+              src="/logo.jpeg"
+              alt="The Dog Hub Logo"
+              width={64}
+              height={64}
+              className="h-14 w-14 sm:h-16 sm:w-16 rounded-full object-cover bg-white shadow-xs border border-gray-900/15 group-hover:scale-105 transition-transform"
+            />
             <div>
               <span className="font-serif text-2xl font-bold text-gray-900 block leading-none">
                 The Dog Hub
               </span>
-              <span className="text-[11px] uppercase tracking-widest text-gray-900/85 font-bold">
+              <span className="text-[11px] uppercase tracking-widest text-gray-900/85 font-bold block mt-1">
                 Raw Dog Food Co.
               </span>
             </div>

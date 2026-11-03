@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Menu,
@@ -14,7 +15,6 @@ import {
   Trash2,
   ArrowRight,
   Compass,
-  Dog,
 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
@@ -73,20 +73,19 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus:outline-none"
+            aria-label="The Dog Hub Home"
+            className="flex items-center gap-3 group focus:outline-none shrink-0"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <div className="w-11 h-11 rounded-xl bg-accent flex items-center justify-center text-gray-900 shadow-xs border border-gray-900/15 group-hover:bg-accent-light transition-colors">
-              <Dog className="w-6 h-6" />
-            </div>
-            <div>
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-gray-900 block leading-none">
-                The Dog Hub
-              </span>
-              <span className="text-[11px] uppercase tracking-widest text-gray-900/85 font-bold block mt-1">
-                Ancestral Raw Nutrition
-              </span>
-            </div>
+            <Image
+              src="/logo.jpeg"
+              alt="The Dog Hub Logo"
+              width={64}
+              height={64}
+              priority
+              className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-cover bg-white shadow-xs border border-gray-900/15 group-hover:scale-105 transition-transform"
+            />
+            <span className="sr-only">The Dog Hub</span>
           </Link>
 
           {/* Desktop Navigation Links */}
